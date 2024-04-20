@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="descripcion"
+      content="Formulario para reporte de fallas de postes electricos en la ciudad de Cali - Colombia"
+    />
+    <title>Reporte de fallas</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Reporte de Postes de Luz Defectuosos</h1>
+      <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="ubicacion">Ubicación del Poste:</label>
+        <input type="text" id="ubicacion" name="ubicacion" required />
+
+        <label for="tipo_falla">Tipo de Falla:</label>
+        <select id="tipo_falla" name="tipo_falla" required>
+          <option value="luz_intermitente">Luz intermitente</option>
+          <option value="luz_apagada">Luz apagada</option>
+          <option value="luz_parpadeante">Luz parpadeante</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="descripcion">Descripción de la Falla:</label>
+        <textarea
+          id="descripcion"
+          name="descripcion"
+          rows="4"
+          required
+        ></textarea>
+
+        <label for="fecha_hora">Fecha y Hora de la Observación:</label>
+        <input
+          type="datetime-local"
+          id="fecha_hora"
+          name="fecha_hora"
+          required
+        />
+
+        <label for="adjuntar_foto">Adjuntar Foto:</label>
+        <input type="file" id="adjuntar_foto" name="adjuntar_foto" />
+
+        <label for="observaciones">Observaciones adicionales:</label>
+        <textarea id="observaciones" name="observaciones" rows="4"></textarea>
+
+        <input type="submit" value="Enviar Reporte" />
+      </form>
+    </div>
+  </body>
+</html>
